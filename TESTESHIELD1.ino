@@ -4,6 +4,7 @@ int motor1Pin10 = 4; // pin 10 on L293D
 int motor1Pin15 = 14; // pin 15 on L293D
 int sensorD = 0;
 int sensorE = 0;
+int x = 0;
 
 void setup() {
   pinMode(motor1Pin2, OUTPUT);
