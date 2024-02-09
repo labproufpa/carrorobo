@@ -1,4 +1,6 @@
 
+teste
+
 int motor1Pin2 = 3; // pin 2 on L293D
 int motor1Pin7 = 2; // pin 7 on L293D
 int motor1Pin10 = 4; // pin 10 on L293D
