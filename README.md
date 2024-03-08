@@ -16,4 +16,6 @@ A plataforma é composta de um chassi com quatro rodas, sensores e um arduino na
 
 ## Requisitos para uso
 
+Biblioteca Ultrasonic para Arduino de Erick Simões
+
 ## Códigos disponíveis
