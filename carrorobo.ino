@@ -56,6 +56,7 @@ void setup() {
   pinMode(2, INPUT);
   pinMode(3, INPUT);
   Serial.begin(9600);
+  delay(1000);
 }
 
 void procura() {
@@ -70,16 +71,17 @@ void procura() {
 void sensorEsquerda() //Teste Sensor de Linha da Esquerda
 {
     sensorE = digitalRead(2);  
-    if (sensorE == 0)  
+    if (sensorE == 1)  
     {
-       /*vai_atras();
+       vai_atras();
        delay(1500);
        vai_direita();
-       delay(2000);*/
+       delay(2000);
        Serial.println("Linha Detectada na Esquerda");
     }  
     else  
-    {  
+    { 
+      procura(); 
       Serial.println("Linha Não Detectada na Esquerda"); 
     }    
 }
@@ -87,16 +89,17 @@ void sensorEsquerda() //Teste Sensor de Linha da Esquerda
 void sensorDireita() //Teste Sensor de Linha da Direita
 {
     sensorD = digitalRead(3);  
-    if (sensorD == 0)  
+    if (sensorD == 1)  
     {
-       /*vai_atras();
+       vai_atras();
        delay(1500);
        vai_esquerda();
-       delay(2000);*/
+       delay(2000);
        Serial.println("Linha Detectada na Direita");
     }  
     else  
-    {  
+    { 
+      procura();
       Serial.println("Linha Não Detectada na Direita"); 
     }    
 }
@@ -116,8 +119,7 @@ void loop() {
   //vai_atras();
   //vai_esquerda();
   //vai_direita();
-  //procura();
-  //sensorEsquerda();
-  //sensorDireita();
-  ataque();
+  sensorEsquerda();
+  sensorDireita();
+  //ataque();
 }
