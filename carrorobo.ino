@@ -1,41 +1,6 @@
 #include <Ultrasonic.h>
 
-Ultrasonic ultrassom(15,16); // define o nome do sensor(ultrassom) onde o trig esta ligado a porta analogica A0 = D14 e o echo porta analogica A1 = D15
-
-#define vai_frente() \
-digitalWrite(EnableE, 1);\
-digitalWrite(EnableD, 1);\
-digitalWrite(MotorE1, 0);\
-digitalWrite(MotorE2, 1);\
-digitalWrite(MotorD1, 0);\
-digitalWrite(MotorD2, 1);\
-
-#define vai_atras() \
-digitalWrite(EnableE, 1);\
-digitalWrite(EnableD, 1);\
-digitalWrite(MotorE1, 1);\
-digitalWrite(MotorE2, 0);\
-digitalWrite(MotorD1, 1);\
-digitalWrite(MotorD2, 0);\
-
-//Referência: Estando atrás do robô
-#define vai_esquerda() \
-digitalWrite(EnableE, 1);\
-digitalWrite(EnableD, 1);\
-digitalWrite(MotorE1, 0);\
-digitalWrite(MotorE2, 1);\
-digitalWrite(MotorD1, 1);\
-digitalWrite(MotorD2, 0);\
-
-//Referência: Estando atrás do robô
-#define vai_direita() \
-digitalWrite(EnableE, 1);\
-digitalWrite(EnableD, 1);\
-digitalWrite(MotorE1, 1);\
-digitalWrite(MotorE2, 0);\
-digitalWrite(MotorD1, 0);\
-digitalWrite(MotorD2, 1);\
-
+Ultrasonic ultrassom(15,16); // define o nome do sensor ultrasonico(ultrassom) onde o trig esta ligado a porta analogica A0 = D14 e o echo porta analogica A1 = D15
 int MotorE1 = 6; // Input 1 dos Motores da Esquerda // Pino 2 do L293 e D6 do Arduino Nano
 int MotorE2 = 7; // Input 2 dos Motores da Esquerda // Pino 7 do L293 e D7 do Arduino Nano
 int MotorD1 = 18; // Input 3 dos Motores da Direita // Pino 10 do L293 e A4 do Arduino Nano (A4 do Arduino Nano = D18 do Arduino Nano)
@@ -59,6 +24,45 @@ void setup() {
   delay(1000);
 }
 
+//Referência: Estando atrás do robô
+void vai_frente() {
+  digitalWrite(EnableE, 1);
+  digitalWrite(EnableD, 1);
+  digitalWrite(MotorE1, 0);
+  digitalWrite(MotorE2, 1);
+  digitalWrite(MotorD1, 0);
+  digitalWrite(MotorD2, 1);
+}
+
+//Referência: Estando atrás do robô
+void vai_atras() {
+  digitalWrite(EnableE, 1);
+  digitalWrite(EnableD, 1);
+  digitalWrite(MotorE1, 1);
+  digitalWrite(MotorE2, 0);
+  digitalWrite(MotorD1, 1);
+  digitalWrite(MotorD2, 0);
+}
+
+//Referência: Estando atrás do robô
+void vai_esquerda() {
+  digitalWrite(EnableE, 1);
+  digitalWrite(EnableD, 1);
+  digitalWrite(MotorE1, 0);
+  digitalWrite(MotorE2, 1);
+  digitalWrite(MotorD1, 1);
+  digitalWrite(MotorD2, 0);
+}
+
+//Referência: Estando atrás do robô
+void vai_direita() {
+  digitalWrite(EnableE, 1);
+  digitalWrite(EnableD, 1);
+  digitalWrite(MotorE1, 1);
+  digitalWrite(MotorE2, 0);
+  digitalWrite(MotorD1, 0);
+  digitalWrite(MotorD2, 1);
+}
 void procura() {
   vai_frente();
   delay(1000);
@@ -107,19 +111,15 @@ void sensorDireita() //Teste Sensor de Linha da Direita
 void ataque(){
   long distancia = ultrassom.Ranging(CM);
   if (distancia < 10)
-  {
-     vai_frente()
-  }
+    {
+     vai_frente();
+    }
   Serial.println("Distancia em cm: ");
   Serial.println(distancia);
 }
 
 void loop() {
-  //vai_frente();
-  //vai_atras();
-  //vai_esquerda();
-  //vai_direita();
   sensorEsquerda();
   sensorDireita();
-  //ataque();
+  ataque();
 }
