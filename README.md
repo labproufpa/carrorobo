@@ -6,17 +6,19 @@ O LabPRO dispõe de uma plataforma que auxília o desenvolvimento de protóripos
 
 ## A plataforma
 
-A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Reflexivo TCRT5000, um sensor ultrassom HC-SR04 e um arduino nano, como microcontrolador.
+A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Reflexivo TCRT5000, CI Ponte H L293, um sensor ultrassom HC-SR04 e um arduino nano, como microcontrolador.
 
 ## Foto da plataforma
 
-<img alt="ci" width="300" height=auto src="imgs/foto.png">
+<img alt="foto" width="300" height=auto src="imgs/foto.png">
 
 ## Esquemático das conexões da plataforma
 
-
+<img alt="Esquemático" width="300" height=auto src="imgs/esquema.jpeg">
 
 ## Projeto da placa controladora
+
+[Projeto da placa de controle para QCad ](files/kicad.rar)
 
 ## Requisitos para uso
 
