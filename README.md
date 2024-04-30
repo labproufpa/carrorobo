@@ -14,7 +14,7 @@ A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Re
 
 ## Esquemático das conexões da plataforma
 
-<img alt="Esquemático" width="300" height=auto src="imgs/esquema.jpeg">
+<img alt="Esquemático" width="500" height=auto src="imgs/esquema.jpeg">
 
 ## Projeto da placa controladora
 
