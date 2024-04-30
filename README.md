@@ -2,11 +2,25 @@
 
 ## Objetivo
 
-O LabPRO dispõe de uma plataforma que auxília o desenvolvimento de protóripos móveis tais como robô seguidor de linha, robô sumô e outros. Os códigos e informações disponibilizados neste repositório são para uso nesta plataforma e servem de base para adição de novas funcionalidades.
+O LabPRO dispõe de uma plataforma que auxília o desenvolvimento de protótipos móveis tais como robô seguidor de linha, robô sumô e outros. Os códigos e informações disponibilizados neste repositório são para uso nesta plataforma e servem de base para adição de novas funcionalidades.
 
 ## A plataforma
 
-A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Reflexivo TCRT5000, CI Ponte H L293, um sensor ultrassom HC-SR04 e um arduino nano, como microcontrolador.
+A plataforma é composta por:
+
+* 1 Arduino Nano V3
+* 1 ShieldRoboV3
+  - 1 Ci Ponte H L293D
+  - 1 Socket DIP 16
+  - 2 Barra de Pino Femea 180 graus
+  - 1 Barra de Pino Macho 180 graus
+* 10 Jumper Femea-Femea 20cm
+* 4 Servo Motor MG995r (Alterados p/ Motor DC e rotação 360 graus)
+* 1 Sensor Ultrasonico HC-SR04
+* 2 Módulo Sensor Ótico TCRT5000
+* 1 Case Para 2 Baterias de Lítio ICR18650 (2x3,7v) 7,4V Sem Plug Com Botão On/Off
+* 2 Bateria LI-ION ICR18650 3,7v 1800 mAH
+* 1 Chassis personalizado em alumínio
 
 ## Foto da plataforma
 
@@ -14,12 +28,11 @@ A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Re
 |---|---|---|
 |<img alt="foto" width="200" height=auto src="imgs/side1.jpeg"> | <img alt="foto" width="200" height=auto src="imgs/foto.png">| <img alt="foto" width="200" height=auto src="imgs/side2.jpeg">|
 
-
 ## Esquemático das conexões da plataforma
 
 <img alt="Esquemático" width="500" height=auto src="imgs/esquema.jpeg">
 
-## Projeto da placa controladora
+## Projeto da placa controladora ShieldRoboV3
 
 [Projeto da placa de controle para KiCad ](files/kicad.rar)
 
