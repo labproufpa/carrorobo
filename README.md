@@ -6,16 +6,22 @@ O LabPRO dispõe de uma plataforma que auxília o desenvolvimento de protóripos
 
 ## A plataforma
 
-A plataforma é composta de um chassi com quatro rodas, sensores e um arduino nano, como placa controladora.
+A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Reflexivo TCRT5000, um sensor ultrassom HC-SR04 e um arduino nano, como microcontrolador.
 
 ## Foto da plataforma
 
+<img alt="ci" width="300" height=auto src="imgs/foto.png">
+
 ## Esquemático das conexões da plataforma
+
+
 
 ## Projeto da placa controladora
 
 ## Requisitos para uso
 
-Biblioteca Ultrasonic para Arduino de Erick Simões
+* Biblioteca Ultrasonic para Arduino de Erick Simões. Esta biblioteca pode ser adquirida por meio da sua IDE de preferência.
 
 ## Códigos disponíveis
+
+* ```carrorobo.ino```: código contendo a movimentação básica do robô. A lógica de movimentação é simples e considera movimentação em uma arena. O robô move para frente até encontrar o fim da arena. A arena tem a cor preta, e a borda branca, portanto ao detectar a borda, a leitura do sensor TCRT5000 mudará de 0 para 1. Nesta situação, o robô anda para trás e muda de direção. A direção do giro depende de qual sensor disparou a leitura, se o esquerdo ou o direito. Enquanto se move para frente, o robô faz a leitura do sensor de ultrassom e imprime a saída na interface serial, ou seja, nenhuma decisão é tomada com base nos dados deste sensor.

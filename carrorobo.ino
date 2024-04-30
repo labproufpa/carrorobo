@@ -8,7 +8,7 @@ int MotorD1 = 18; // Input 3 dos Motores da Direita // Pino 10 do L293 e A4 do A
 int MotorD2 = 17; // Input 4 dos Motores da Direita // Pino 15 do L293 e A3 do Arduino Nano (A3 do Arduino Nano = D17 do Arduino Nano)
 int EnableE = 5; // Enable 1 dos motores da esquerda // Pino 1 do L293 e D5 do Arduino Nano
 int EnableD = 9; // Enable 2 dos motores da Direita // Pino 9 do L293 e D9 do Arduino Nano
-int sensorD = 0; // Sensor TCRT5000 da Direita  D9 do Arduino Nano
+int sensorD = 0; // Sensor TCRT5000 da Direita, Pino D9 do Arduino Nano
 int sensorE = 0; //Sensor TCRT5000 da Direita D9 do Arduino Nano
 int contador = 0;
 
@@ -64,6 +64,7 @@ void vai_direita() {
   digitalWrite(MotorD1, 0);
   digitalWrite(MotorD2, 1);
 }
+
 void procura() {
   vai_frente();
   delay(1000);
