@@ -18,7 +18,7 @@ A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Re
 
 ## Projeto da placa controladora
 
-[Projeto da placa de controle para QCad ](files/kicad.rar)
+[Projeto da placa de controle para KiCad ](files/kicad.rar)
 
 ## Requisitos para uso
 
