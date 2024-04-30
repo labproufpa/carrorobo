@@ -6,11 +6,13 @@ Ultrasonic ultrassom(15,16); // define o nome do sensor ultrasonico(ultrassom) o
 #define MOTOR_E2 7 // Input 2 dos Motores da Esquerda // Pino 7 do L293 e D7 do Arduino Nano
 #define MOTOR_D1 18 // Input 3 dos Motores da Direita // Pino 10 do L293 e A4 do Arduino Nano (A4 do Arduino Nano = D18 do Arduino Nano)
 #define MOTOR_D2 17 // Input 4 dos Motores da Direita // Pino 15 do L293 e A3 do Arduino Nano (A3 do Arduino Nano = D17 do Arduino Nano)
-#define ENABLE_E 5 // Enable 1 dos motores da esquerda // Pino 1 do L293 e D5 do Arduino Nano
+#define ENABLE_E 5 // Enable 1 dos motores da Esquerda // Pino 1 do L293 e D5 do Arduino Nano
 #define ENABLE_D 9 // Enable 2 dos motores da Direita // Pino 9 do L293 e D9 do Arduino Nano
+#define SENSOR_D 3 // Pino do sensor de linha TCRT5000 da direita
+#define SENSOR_E 2 // Pino do sensor de linha TCRT5000 da esquerda
 
-int sensorE = 0; // Sensor TCRT5000 da Direita  D3 do Arduino Nano
-int sensorD = 0; //Sensor TCRT5000 da Direita D2 do Arduino Nano
+int sensorE = 0; // Variável para leitura do sensor TCRT5000 da Direita  D3 do Arduino Nano
+int sensorD = 0; // Variável para leitura do sensor TCRT5000 da Esquerda D2 do Arduino Nano
 
 void setup() {
   pinMode(MOTOR_E1, OUTPUT);
@@ -19,8 +21,8 @@ void setup() {
   pinMode(MOTOR_D1, OUTPUT);
   pinMode(MOTOR_D2, OUTPUT);
   pinMode(ENABLE_D, OUTPUT);
-  pinMode(2, INPUT);
-  pinMode(3, INPUT);
+  pinMode(SENSOR_E, INPUT);
+  pinMode(SENSOR_D, INPUT);
   Serial.begin(9600);
   delay(2000); //Tempo de espera necessario apos o inicio do round
 }
@@ -67,7 +69,7 @@ void vai_direita() {
 
 void sensorEsquerda() //Teste Sensor de Linha da Esquerda
 {
-    sensorE = digitalRead(2);  
+    sensorE = digitalRead(SENSOR_E);  
     if (sensorE == 1)  
     {
        vai_atras();
@@ -84,7 +86,7 @@ void sensorEsquerda() //Teste Sensor de Linha da Esquerda
 
 void sensorDireita() //Teste Sensor de Linha da Direita
 {
-    sensorD = digitalRead(3);  
+    sensorD = digitalRead(SENSOR_D);  
     if (sensorD == 1)  
     {
        vai_atras();
