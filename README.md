@@ -10,9 +10,10 @@ A plataforma é composta de um chassi com quatro rodas, dois sensores Óptico Re
 
 ## Foto da plataforma
 
-<img alt="foto" width="200" height=auto src="imgs/side1.jpeg">
-<img alt="foto" width="200" height=auto src="imgs/foto.png">
-<img alt="foto" width="200" height=auto src="imgs/side2.jpeg">
+|Vista Lateral 1|Vista Interna|Vista Lateral 3|
+|---|---|---|
+|<img alt="foto" width="200" height=auto src="imgs/side1.jpeg"> | <img alt="foto" width="200" height=auto src="imgs/foto.png">| <img alt="foto" width="200" height=auto src="imgs/side2.jpeg">|
+
 
 ## Esquemático das conexões da plataforma
 
